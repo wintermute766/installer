@@ -21,7 +21,7 @@ class ToggledFrame(Frame):
         self.title_frame = Frame(self)
         self.title_frame.pack(fill="x", expand=1)
 
-        Label(self.title_frame, text=text).pack(side="left", fill="x", expand=1)
+        Label(self.title_frame, text=text, bg=options.get("bg")).pack(side="left", fill="x", expand=1)
 
         self.toggle_button = Checkbutton(self.title_frame, width=2, command=self.toggle,
                                             variable=self.show)
@@ -64,13 +64,89 @@ class GuiPart:
             self.ent.pack(side=RIGHT, expand=YES, fill=X)
             entries.append((field[1], self.ent))
 
-        t = ToggledFrame(master, text='Rotate', relief="raised", borderwidth=1)
+        t = ToggledFrame(master, text='Базовые фреймы', bg="white", relief="raised", borderwidth=1)
         t.pack(fill="x", expand=1, pady=2, padx=2, anchor="n")
-        Label(t.sub_frame, text=u'Введите данные:').pack(side="left")
+
+        Label(t.sub_frame, text="Введите данные").pack(side="left")
         Entry(t.sub_frame).pack(fill="x", expand=1)
         Entry(t.sub_frame).pack(fill="x", expand=1)
         Entry(t.sub_frame).pack(fill="x", expand=1)
         Entry(t.sub_frame).pack(fill="x", expand=1)
+        Entry(t.sub_frame).pack(fill="x", expand=1)
+        Entry(t.sub_frame).pack(fill="x", expand=1)
+
+        separator = Frame(t.sub_frame, height=2, bd=1, relief=SUNKEN)
+        separator.pack(fill=X, padx=5, pady=5)
+
+        Entry(t.sub_frame).pack(fill="x", expand=1)
+        Entry(t.sub_frame).pack(fill="x", expand=1)
+        Entry(t.sub_frame).pack(fill="x", expand=1)
+        Entry(t.sub_frame).pack(fill="x", expand=1)
+        Entry(t.sub_frame).pack(fill="x", expand=1)
+        Entry(t.sub_frame).pack(fill="x", expand=1)
+
+        t = ToggledFrame(master, text='Фреймы расширения', bg="white", relief="raised", borderwidth=1)
+        t.pack(fill="x", expand=1, pady=2, padx=2, anchor="n")
+
+        t1 = ToggledFrame(t.sub_frame, text='Фрейм расширения 1', relief="raised", borderwidth=1)
+        t1.pack(fill="x", expand=1, pady=2, padx=2, anchor="n")
+        Label(t1.sub_frame, text='Введите данные:').pack(side="left")
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+
+        t1 = ToggledFrame(t.sub_frame, text='Фрейм расширения 2', relief="raised", borderwidth=1)
+        t1.pack(fill="x", expand=1, pady=2, padx=2, anchor="n")
+        Label(t1.sub_frame, text='Введите данные:').pack(side="left")
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+
+        t1 = ToggledFrame(t.sub_frame, text='Фрейм расширения 3', relief="raised", borderwidth=1)
+        t1.pack(fill="x", expand=1, pady=2, padx=2, anchor="n")
+        Label(t1.sub_frame, text='Введите данные:').pack(side="left")
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+
+        t1 = ToggledFrame(t.sub_frame, text='Фрейм расширения 4', relief="raised", borderwidth=1)
+        t1.pack(fill="x", expand=1, pady=2, padx=2, anchor="n")
+        Label(t1.sub_frame, text='Введите данные:').pack(side="left")
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+
+        t1 = ToggledFrame(t.sub_frame, text='Фрейм расширения 5', relief="raised", borderwidth=1)
+        t1.pack(fill="x", expand=1, pady=2, padx=2, anchor="n")
+        Label(t1.sub_frame, text='Введите данные:').pack(side="left")
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+
+        t1 = ToggledFrame(t.sub_frame, text='Фрейм расширения 6', relief="raised", borderwidth=1)
+        t1.pack(fill="x", expand=1, pady=2, padx=2, anchor="n")
+        Label(t1.sub_frame, text='Введите данные:').pack(side="left")
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
+        Entry(t1.sub_frame).pack(fill="x", expand=1)
 
         for field in fieldsSingle:
             self.row = Frame(master)
@@ -86,6 +162,9 @@ class GuiPart:
 
         self.b2 = Button(master, text='Начать установку', command=(lambda: install()), state = DISABLED)
         self.b2.pack(side=LEFT, padx=5, pady=5)
+
+        self.b4 = Button(master, text='  Файл  ', command=(lambda: connect()))
+        self.b4.pack(side=LEFT, padx=5, pady=5)
 
         self.b3 = Button(master, text='Выход', command=endCommand)
         self.b3.pack(side=RIGHT, padx=5, pady=5)
@@ -221,3 +300,4 @@ if __name__ == '__main__':
 
 #KEYBOARD INTERRUPT
 #TAB & ENTER HANDLING
+#PASSWORD show="*"
